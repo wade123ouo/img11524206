@@ -27,7 +27,7 @@ function preload() {
 
 function setup() {
 
-  createCanvas(320, 320);
+ createCanvas(320, 320);
 
   
 
@@ -93,6 +93,6 @@ function gotResult(error, results) {
   // Classifiy again!
   classifyVideo();
 }
-function setup() {
+
 
  
