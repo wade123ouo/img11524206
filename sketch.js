@@ -68,3 +68,46 @@ function gotResult(error, results) {
   // Classifiy again!
   classifyVideo();
 }
+function setup() {
+
+  createCanvas(320, 320);
+
+  
+
+  // Create the video
+
+    var constraints = {
+
+    audio: false,
+
+    video: {
+
+      facingMode: {
+
+        exact: "environment"
+
+      }
+
+    }   
+
+    //video: {
+
+      //facingMode: "user"
+
+    //}
+
+  };
+
+  video = createCapture(constraints);
+
+  video.size(320, 320);
+
+  video.hide();
+
+  flippedVideo = ml5.flipImage(video)
+
+  // Start classifying
+
+  classifyVideo();
+
+}
